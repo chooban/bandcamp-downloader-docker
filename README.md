@@ -4,12 +4,13 @@ This is a containerised version of [Ezwen's Bandcamp Collection Downloader](http
 I wanted to run it on my docker-capable NAS, so wrapped it in a docker image based on the
 [linuxserver.io](https://www.linuxserver.io/) images.
 
-## How To Run
+## How To Run
 
-1. Build the image, or pull it from [Docker Hub](https://hub.docker.com/repository/docker/chooban/bandcamp-downloader).
+1. Pull it from [Docker Hub](https://hub.docker.com/repository/docker/chooban/bandcamp-downloader).
+   There are images for `arm64` and `amd64`.
 
 ```
-docker build . -t bandcamp
+docker pull chooban/bandcamp-downloader
 ```
 
 2. Retrieve your cookies using the options specified in the parent project. Then put them in the folder
@@ -24,5 +25,5 @@ docker run \
   -e BANDCAMP_USERNAME=<USERNAME GOES HERE> \
   -v /Users/ross/Projects/bandcamp-downloader/config/:/bandcamp-config \
   -v /Users/ross/Projects/bandcamp-downloader/download/:/download \
-  bandcamp
+  chooban/bandcamp-downloader
 ```
