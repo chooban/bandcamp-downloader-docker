@@ -23,7 +23,7 @@ docker run \
   -e PUID=<user id for output files>
   -e PGID=<group id for output files>
   -e BANDCAMP_USERNAME=<USERNAME GOES HERE> \
-  -v /Users/ross/Projects/bandcamp-downloader/config/:/bandcamp-config \
-  -v /Users/ross/Projects/bandcamp-downloader/download/:/download \
+  -v ./config/:/bandcamp-config \
+  -v ./downloads/:/download \
   chooban/bandcamp-downloader
 ```
