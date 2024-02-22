@@ -23,6 +23,6 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v5
         with:
-          push: false
+          push: true
           platforms: linux/amd64,linux/arm64
           tags: chooban/bandcamp-downloader:latest
