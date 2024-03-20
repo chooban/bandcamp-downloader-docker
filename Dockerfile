@@ -44,9 +44,10 @@ VOLUME /download
 
 ENV BANDCAMP_USERNAME=noname
 ENV FORMAT=flac
+ENV COOKIES_FILE=cookies.json
 
 CMD java -jar /app/bandcamp-downloader/bandcamp-downloader.jar \
-  --cookies-file=/bandcamp-config/cookies.txt \
+  --cookies-file=/bandcamp-config/$COOKIES_FILE \
   --download-folder=/download \
   --audio-format=$FORMAT \
   $BANDCAMP_USERNAME
